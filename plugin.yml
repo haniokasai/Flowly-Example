@@ -1,0 +1,20 @@
+name: FlowExample
+main: haniokasai\FlowExample
+version: 0.1
+api: [3.0.0]
+load: POSTWORLD
+author: haniokasai
+description: FlowExample
+website: haniokasai.com
+commands:
+ fl:
+  description: "FlowTest"
+  usage: "/fl"
+permissions:
+ fl:
+  default: true
+  description: "Flow"
+  children:
+   fl.command:
+    default: true
+    description: "Flow"
