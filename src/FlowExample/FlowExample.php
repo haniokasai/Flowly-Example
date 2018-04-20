@@ -1,6 +1,7 @@
 <?php
-namespace FlowyExample;
+namespace FlowExample;
 
+#use Flowy\Flowy;
 use Flowy\Flowy;
 use function Flowy\listen;
 
