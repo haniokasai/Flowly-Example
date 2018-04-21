@@ -1,7 +1,6 @@
 <?php
 namespace FlowExample;
 
-#use Flowy\Flowy;
 use Flowy\Flowy;
 use function Flowy\listen;
 
@@ -13,9 +12,11 @@ class FlowExample extends Flowy{
 	}
 
 	function test(){
-        /** @var PlayerMoveEvent $event */
-        $event = yield listen(PlayerMoveEvent::class);
-		$player = $event->getPlayer();
-		$player->sendMessage("moving");
+		while(true){
+			/** @var PlayerMoveEvent $event */
+			$event = yield listen(PlayerMoveEvent::class);
+			$player = $event->getPlayer();
+			$player->sendMessage("moving");
+		}
 	}
 }
