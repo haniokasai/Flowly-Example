@@ -63,7 +63,7 @@ class FlowExample extends Flowy{//extendsで各種関数を取り入れます。
                 });
 
         $event->getPlayer()->sendMessage("please wait".time());
-        yield ;delay(20*3); //遅延を作ってみます。 20tick = 1秒 を３倍しています。
+        yield delay(20*3); //遅延を作ってみます。 20tick = 1秒 を３倍しています。
         $event->getPlayer()->sendMessage("after 3 second...".time());
         $this->start($this->test3());//test3関数を１度だけ呼び出します。自身をループして呼び出すことになるので、test１のようにwhileで挟んだような振る舞いをします
     }
